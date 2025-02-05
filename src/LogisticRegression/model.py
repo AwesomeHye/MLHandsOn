@@ -1,7 +1,7 @@
 from torch import nn
 
 
-class LogisticRegressionModel(nn.Module) :
+class LogisticRegressionModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.logistic_stack = nn.Sequential(

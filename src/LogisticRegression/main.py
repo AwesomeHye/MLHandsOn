@@ -3,7 +3,7 @@ import torch
 from torch import nn
 import matplotlib.pyplot as plt
 
-from src.model.LogisticRegressionModel import LogisticRegressionModel
+from src.LogisticRegression.model import LogisticRegressionModel
 
 loaded_data = np.loadtxt('/Users/hiseo/DataSet/diabetes.csv', delimiter=',', skiprows=1) # numpy.ndarray
 print(type(loaded_data))
