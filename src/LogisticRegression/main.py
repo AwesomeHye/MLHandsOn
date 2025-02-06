@@ -3,6 +3,8 @@ import torch
 from torch import nn
 import matplotlib.pyplot as plt
 
+# input: 환자 속성 (한 속성 당 차원 하나)
+# output: 당뇨병 여부
 from src.LogisticRegression.model import LogisticRegressionModel
 
 loaded_data = np.loadtxt('/Users/hiseo/DataSet/diabetes.csv', delimiter=',', skiprows=1) # numpy.ndarray

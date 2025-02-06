@@ -7,7 +7,8 @@ from model import MultiLayerPerceptronModel
 from datetime import datetime
 import matplotlib.pyplot as plt
 
-
+# input: 손글씨로 숫자가 그려진 이미지 벡터
+# output: 0~9 까지의 손글씨로 쓴 숫자
 def model_train(dataloader, model, loss_function, optimizer):
     model.train()  ## 신경망을 학습 모드로 전환 (모델 파라미터 업데이트 가능)
     train_loss_sum = train_correct = train_total = 0
@@ -82,7 +83,7 @@ test = datasets.MNIST(root='/Users/hiseo/DataSet/MNIST', train=False, transform=
 train_size = int(len(train) * 0.85)
 validation_size = int(len(train) * 0.15)
 train, validation = random_split(train, [train_size, validation_size])
-print('train:', len(train), 'validation:', len(validation), 'test:', len(test))
+print('train:', len(train), 'validation:', len(validation), 'test:', len(test))  # train: 51000 validation: 9000 test: 10000
 
 ################## 데이터 읽기 ##################
 
